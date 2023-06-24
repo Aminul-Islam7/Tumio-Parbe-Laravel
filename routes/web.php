@@ -18,3 +18,6 @@ Route::post('/users', [UserController::class, 'store']);
 
 // Show Login Form
 Route::get('/login', [UserController::class, 'login'])->name('login');
+
+// Send verification code
+Route::post('/verify', [UserController::class, 'verify'])->name('verify');
