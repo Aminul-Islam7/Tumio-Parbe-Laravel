@@ -1,8 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+@import "resets";
+@import "presets";
+@import "register";
 
-body {
-    // background-color: blue;
+#navbarNav {
+    ul li {
+        text-align: center;
+    }
 }

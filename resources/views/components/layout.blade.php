@@ -7,9 +7,15 @@
   
   <title>Tumio Parbe{{ isset($title) ? " - $title" : $title = null}}</title>
   
-  {{-- Icon --}}
   
+  {{-- Icon --}}
   <link rel="shortcut icon" href="{{asset('images/icon.png')}}" type="image/x-icon">
+
+
+  {{-- Fonts --}}
+  <link
+  href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Bengali:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+Bengali:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet">
   
   {{-- Font Awesome CSS --}}
   <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
@@ -38,25 +44,28 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#courses">Courses</a>
+            <a class="nav-link" href="/#courses">Courses</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#awards">Awards</a>
+            <a class="nav-link" href="/#awards">Awards</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="/#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link" href="/#contact">Contact</a>
           </li>
       </div>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/users/login"><i class="fa-duotone fa-right-to-bracket"></i> Login</a>
+            <a class="nav-link" href="{{ route('login') }}"><i class="fa-duotone fa-right-to-bracket"></i> Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('register') }}"><i class="fa-duotone fa-pen-to-square"></i> Register</a>
           </li>
         </ul>
       </div>
@@ -64,8 +73,14 @@
   </nav>
   </header>
 
-  {{$slot}}
-
+  <main>
+    {{$slot}}
+  </main>
+  
+  <script src="{{asset('js/jquery-3.7.0.min.js')}}"></script>
   <script src="{{asset('js/bootstrap.min.js')}}"></script>
+  
+  @include('javascript')
+
 </body>
 </html>
