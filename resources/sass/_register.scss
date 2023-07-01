@@ -12,4 +12,22 @@
         margin: 0 auto;
         margin-top: 20px;
     }
+
+    #resendCode {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 14px;
+        color: #777;
+        margin-left: auto;
+        font-weight: 700;
+
+        &.enabled {
+            color: #08b363;
+
+            &:hover {
+                color: #008145;
+            }
+        }
+    }
 }

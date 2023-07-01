@@ -66,7 +66,7 @@
             <a class="nav-link" href="{{ route('login') }}"><i class="fa-duotone fa-right-to-bracket"></i> Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('register') }}"><i class="fa-duotone fa-pen-to-square"></i> Register</a>
+            <a class="nav-link" href="{{ route('register-phone') }}"><i class="fa-duotone fa-pen-to-square"></i> Register</a>
           </li>
         </ul>
       </div>

@@ -41,6 +41,21 @@
   margin: 0 auto;
   margin-top: 20px;
 }
+#register #resendCode {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #777;
+  margin-left: auto;
+  font-weight: 700;
+}
+#register #resendCode.enabled {
+  color: #08b363;
+}
+#register #resendCode.enabled:hover {
+  color: #008145;
+}
 
 #navbarNav ul li {
   text-align: center;

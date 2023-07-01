@@ -10,14 +10,14 @@ Route::get('/', function () {
 })->name('home');
 
 // Show Register Form
-Route::get('/register', [UserController::class, 'register'])->name('register');
+Route::get('/register', [UserController::class, 'registerPhone'])->name('register-phone');
+
+// Send verification code and show verification view
+Route::post('/verify', [UserController::class, 'verify'])->name('verify');
 
 // Create New User
-Route::post('/users', [UserController::class, 'store']);
+Route::post('/registration-form', [UserController::class, 'register'])->name('register');
 
 
 // Show Login Form
 Route::get('/login', [UserController::class, 'login'])->name('login');
-
-// Send verification code
-Route::post('/verify', [UserController::class, 'verify'])->name('verify');
